@@ -129,5 +129,5 @@ CUDA_VISIBLE_DEVICES=0 fairseq-train $dest \
 --encoder-attention-heads 8 --decoder-attention-heads 8 \
 --eval-bleu --eval-bleu-remove-bpe "sentencepiece" \
 --use-pretrained-ocr \
-
+--pretrained-ocr-path "$pretrained_ocr_path" \
 # --multi-line --model-height 320 --model-width 480 \
