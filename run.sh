@@ -38,6 +38,13 @@
 #         |—— 0.jpg
 #         |—— 1.jpg
 #         |—— ....
+#         |—— 2000.jpg
+#         |—— text.en
+#         |—— text.zh
+#     |—— test_images
+#         |—— 0.jpg
+#         |—— 1.jpg
+#         |—— ....
 #         |—— 1000.jpg
 #         |—— text.en
 #         |—— text.zh
@@ -51,7 +58,7 @@ tmp=/path/to/tmp
 bash $MAIN/data_synthesis_and_preprocess/preprocess/MT_process_data.sh $tmp/data/mt_data $src $tgt
 
 # training 
-max_update=10
+max_update=100000
 text_dest="$tmp/data/mt_data"
 text_model_path="$tmp/models/mt_model_${src}_to_${tgt}"
 mkdir -p $text_model_path
