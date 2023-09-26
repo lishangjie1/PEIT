@@ -1,0 +1,85 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args":[
+                "/data1/lsj/image_translation/synthetic_image_data/train_data/char_dest",
+                "--task", "image_translation",
+                "-s","zh","-t","en",
+                "--path", "/data1/lsj/image_translation/models/image_char_model_256_2048_resnet/checkpoint_best.pt",
+                "--bpe", "sentencepiece", "--sentencepiece-model", "/data1/lsj/image_translation/text_data/data/spm_model/en.model",
+            ]
+            // "args":[
+            //     "/data/lsj/nfs/it_experiment/data/general_data/syn_data_en/dest_enfr",
+            //     "-s", "en", "-t", "fr", 
+            //     "--fp16", "--max-update" ,"100000" ,"--save-interval-updates" ,"2500", "--no-epoch-checkpoints" ,
+            //     "--arch" ,"itransformer", "--task", "image_translation" ,"--optimizer", "adam" ,"--adam-betas", "(0.9, 0.98)" ,"--lr", "1e-4", "--lr-scheduler", "inverse_sqrt" ,
+            //     "--criterion", "label_smoothed_cross_entropy_contrastive", "--label-smoothing", "0.1 ", "--dropout" "0.1" ,
+            //     "--batch-size", "400", "--max-tokens" ,"4096" ,"--update-freq" ,"2" ,"--skip-invalid-size-inputs-valid-test" ,"--log-interval", "10",
+            //     "--dataset-impl", "mmap", "--ddp-backend", "legacy_ddp",
+            //     "--encoder-embed-dim", "1024", "--encoder-ffn-embed-dim", "4096",
+            //     "--encoder-attention-heads", "16", "--decoder-attention-heads", "16",
+            //     "--multi-line", "--model-height", "320", "--model-width", "480",
+            //     "--use-contrastive-learning", "--ctr-lamda", "1.0",
+            //     "--teacher-mt-dir", "/data/lsj/nfs/it_experiment/general_models/text_enfr_large",
+            //     "--teacher-mt-data-dir", "/data/lsj/nfs/it_experiment/data/general_data/text_data/enfr",
+            //     "--use-multi-task-learning", "--mtl-it-lamda", "1.0", "--mtl-mt-lamda", "1.0",
+            //     "--use-knowledge-distillation", "--kd-lamda", "1.0",
+            // ]
+            // "args":[
+            //     "/data1/lsj/image_translation/synthetic_image_data/train_data/char_dest",
+            //     "--externel-data", "/data/lsj/nfs/it_experiment/data/text_data/char_data",
+            //     "--task-prob", "0.5,0.5", 
+            //     "-s", "zh", "-t", "en", 
+            //     "--save-dir", "/data/lsj/nfs/it_experiment/models/image_char_model_256_2048_fixctr+kd+grid",
+            //     "--restore-file", "/data/lsj/nfs/it_experiment/models/image_char_model_256_2048_fixctr+kd/checkpoint_best.pt",
+            //     "--reset-dataloader", "--reset-lr-scheduler", "--reset-meters", "--reset-optimizer",
+            //     "--fp16", "--max-update" ,"100000" ,"--save-interval-updates" ,"2500", "--no-epoch-checkpoints" ,
+            //     "--arch" ,"itransformer", "--task", "image_translation" ,"--optimizer", "adam" ,"--adam-betas", "(0.9, 0.98)" ,"--lr", "1e-4", "--lr-scheduler", "inverse_sqrt" ,
+            //     "--criterion", "label_smoothed_cross_entropy_contrastive", "--label-smoothing", "0.1 ", "--dropout" "0.1" ,
+            //     "--batch-size", "400", "--max-tokens" ,"4096" ,"--update-freq" ,"2" ,"--skip-invalid-size-inputs-valid-test" ,"--log-interval", "10",
+            //     "--use-pretrained-ocr", "--dataset-impl", "mmap", "--ddp-backend", "legacy_ddp",
+            //     "--encoder-embed-dim", "256", "--encoder-ffn-embed-dim", "2048"
+            // ]
+            // "args":[
+            //     "/data/lsj/nfs/it_experiment/data/test_data/char_dest",
+            //     "--path", "/data1/lsj/image_translation/models/ft_text_char_model_256_2048/checkpoint_best.pt",  ,
+            //     "--task",  "image_translation"  ,
+            //     "--gen-subset",  "test" ,
+            //     "-s", "zh", "-t", "en" ,
+            //     "--bpe",  "sentencepiece",  "--sentencepiece-model",  "/data1/lsj/image_translation/text_data/data/spm_model/english.model" ,
+            //     "--scoring", "sacrebleu" ,
+            //     "--batch-size",  "128" ,
+            //     "--results-path", "/data1/lsj/image_translation/generate_dir" ,
+            //     "--skip-invalid-size-inputs-valid-test" ,
+            //     "--dataset-impl", "mmap",
+            //     "--pipeline",
+                
+            // ]
+
+            // "args":[
+            //     "/data/lsj/nfs/it_experiment/data/text_data/data/transformer",
+            //     "-s", "zh", "-t", "en", 
+            //     "--save-dir", "/data/lsj/nfs/it_experiment/models/text_model",
+            //     "--reset-dataloader", "--reset-lr-scheduler", "--reset-meters", "--reset-optimizer",
+            //     "--fp16", "--max-update" ,"10000" ,"--save-interval-updates" ,"2000", "--no-epoch-checkpoints" ,
+            //     "--arch" ,"transformer", "--task", "translation" ,"--optimizer", "adam" ,"--adam-betas", "(0.9, 0.98)" ,"--lr", "5e-4", "--lr-scheduler", "inverse_sqrt" ,
+            //     "--criterion", "label_smoothed_cross_entropy", "--label-smoothing", "0.1 ", "--dropout" "0.1" ,
+            //     "--max-tokens" ,"12000" ,"--update-freq" ,"4" ,"--skip-invalid-size-inputs-valid-test" ,"--log-interval", "10",
+            //     "--dataset-impl", "mmap", "--ddp-backend", "c10d", "--share-decoder-input-output-embed",
+            //     "--encoder-embed-dim", "256", "--encoder-ffn-embed-dim", "1024", "--encoder-attention-heads", "8", "--decoder-attention-heads", "8",
+                
+            // ]
+
+        }
+    ]
+}
