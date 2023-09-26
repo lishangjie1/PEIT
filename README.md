@@ -7,49 +7,48 @@ pip install -e ./
 python setup.py build_ext --inplace
 ## Folder structure
 Assuming the folder structure is as follows:  
-<code>/tmp/data  
-|—— mt_data (parallel text data)  
-    |—— train.en  
-    |—— train.zh  
-    |—— valid.en  
-    |—— valid.zh  
-  
-|—— it_data (Synthetic Data)  
-    |—— train_images  
-        |—— 0.jpg  
-        |—— 1.jpg  
-        |—— ....  
-        |—— 10000000.jpg  
-        |—— text.en  
-        |—— text.zh  
-    |—— valid_images  
-        |—— 0.jpg  
-        |—— 1.jpg  
-        |—— ....  
-        |—— 1000.jpg  
-        |—— text.en  
-        |—— text.zh  
-|—— ft_data (ECOIT)  
-    |—— train_images  
-        |—— 0.jpg  
-        |—— 1.jpg  
-        |—— ....  
-        |—— 470000.jpg  
-        |—— text.en  
-        |—— text.zh  
-    |—— valid_images  
-        |—— 0.jpg  
-        |—— 1.jpg  
-        |—— ....  
-        |—— 2000.jpg  
-        |—— text.en  
+<code>/tmp/data
+|—— mt_data (parallel text data)
+    |—— train.en
+    |—— train.zh
+    |—— valid.en
+    |—— valid.zh
+|—— it_data (Synthetic Data)
+    |—— train_images
+        |—— 0.jpg
+        |—— 1.jpg
+        |—— ....
+        |—— 10000000.jpg
+        |—— text.en
         |—— text.zh
-    |—— test_images  
-        |—— 0.jpg  
-        |—— 1.jpg  
-        |—— ....  
-        |—— 1000.jpg  
-        |—— text.en  
+    |—— valid_images
+        |—— 0.jpg
+        |—— 1.jpg
+        |—— ....
+        |—— 1000.jpg
+        |—— text.en
+        |—— text.zh
+|—— ft_data (ECOIT)
+    |—— train_images
+        |—— 0.jpg
+        |—— 1.jpg
+        |—— ....
+        |—— 470000.jpg
+        |—— text.en
+        |—— text.zh
+    |—— valid_images
+        |—— 0.jpg
+        |—— 1.jpg
+        |—— ....
+        |—— 2000.jpg
+        |—— text.en
+        |—— text.zh
+    |—— test_images
+        |—— 0.jpg
+        |—— 1.jpg
+        |—— ....
+        |—— 1000.jpg
+        |—— text.en
         |—— text.zh</code>
     
 
