@@ -1,6 +1,6 @@
 # PEIT 
 ## overview
-The codes for ACL2023 paper: "PEIT: Bridging the Modality Gap with Pre-trained Models for End-to-End Image Translation"
+The codes for ACL2023 paper: "PEIT: Bridging the Modality Gap with Pre-trained Models for End-to-End Image Translation" [[paper](https://aclanthology.org/2023.acl-long.751/)]
 ## installment
 pip install -e ./
 
