@@ -71,6 +71,7 @@ UN dataset
 - ft_data is the ECOIT dataset and will be used to fine-tune image translation model.
 
 - Please refer to <code>run.sh</code> for the complete training process.
+- Please refer to <code>run_generate.sh</code> for the image translation inference.
 
 
 
