@@ -73,5 +73,8 @@ UN dataset
 - Please refer to <code>run.sh</code> for the complete training process.
 - Please refer to <code>run_generate.sh</code> for the image translation inference.
 
+## Multi-Line Image Translation
+- Please set <code>--multi-line --model-height 320 --model-width 480</code> in IT training，the encoder of IT model will flatten feature maps from multiple rows into one row.
+
 
 
