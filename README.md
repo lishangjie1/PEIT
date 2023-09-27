@@ -74,7 +74,8 @@ UN dataset
 - Please refer to <code>run_generate.sh</code> for the image translation inference.
 
 ## Multi-Line Image Translation
-- Please set <code>--multi-line --model-height 320 --model-width 480</code> in IT training，the encoder of IT model will flatten feature maps from multiple rows into one row.
+- Please set <code>--multi-line --model-height 320 --model-width 480</code> in IT training，the visual encoder of IT model will flatten feature maps from multiple rows into one row.
 
-
+## Pretrained OCR Initialization
+- For CRNN visual encoder, we initialize its parameters with a pretrained ocr model (zh_sim_g2.pth), you can download it from [EasyOCR](https://github.com/JaidedAI/EasyOCR).
 
