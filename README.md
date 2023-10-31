@@ -2,7 +2,7 @@
 ## overview
 The codes for ACL2023 paper: "PEIT: Bridging the Modality Gap with Pre-trained Models for End-to-End Image Translation" [[paper](https://aclanthology.org/2023.acl-long.751/)]
 ## Download ECOIT Dataset
-We have released ECOIT Dataset, you can download it [[here](https://pan.baidu.com/s/1UYSjSD6GUrt1tTqwgZlH0g?pwd=1fdg)].
+We have released ECOIT Dataset, you can download it [here](https://pan.baidu.com/s/1UYSjSD6GUrt1tTqwgZlH0g?pwd=1fdg).
 ## installment
 pip install -e ./
 
@@ -80,4 +80,28 @@ UN dataset
 
 ## Pretrained OCR Initialization
 - For CRNN visual encoder, we initialize its parameters with a pretrained ocr model (zh_sim_g2.pth), you can download it from [EasyOCR](https://github.com/JaidedAI/EasyOCR).
+
+# Citation
+Please cite as:
+``` bibtex
+@inproceedings{zhu-etal-2023-peit,
+    title = "{PEIT}: Bridging the Modality Gap with Pre-trained Models for End-to-End Image Translation",
+    author = "Zhu, Shaolin  and
+      Li, Shangjie  and
+      Lei, Yikun  and
+      Xiong, Deyi",
+    editor = "Rogers, Anna  and
+      Boyd-Graber, Jordan  and
+      Okazaki, Naoaki",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.751",
+    doi = "10.18653/v1/2023.acl-long.751",
+    pages = "13433--13447",
+    abstract = "Image translation is a task that translates an image containing text in the source language to the target language. One major challenge with image translation is the modality gap between visual text inputs and textual inputs/outputs of machine translation (MT). In this paper, we propose PEIT, an end-to-end image translation framework that bridges the modality gap with pre-trained models. It is composed of four essential components: a visual encoder, a shared encoder-decoder backbone network, a vision-text representation aligner equipped with the shared encoder and a cross-modal regularizer stacked over the shared decoder. Both the aligner and regularizer aim at reducing the modality gap. To train PEIT, we employ a two-stage pre-training strategy with an auxiliary MT task: (1) pre-training the MT model on the MT training data to initialize the shared encoder-decoder backbone network; and (2) pre-training PEIT with the aligner and regularizer on a synthesized dataset with rendered images containing text from the MT training data. In order to facilitate the evaluation of PEIT and promote research on image translation, we create a large-scale image translation corpus ECOIT containing 480K image-translation pairs via crowd-sourcing and manual post-editing from real-world images in the e-commerce domain. Experiments on the curated ECOIT benchmark dataset demonstrate that PEIT substantially outperforms both cascaded image translation systems (OCR+MT) and previous strong end-to-end image translation model, with fewer parameters and faster decoding speed.",
+}
+```
 
