@@ -1,6 +1,8 @@
 # PEIT 
 ## overview
 The codes for ACL2023 paper: "PEIT: Bridging the Modality Gap with Pre-trained Models for End-to-End Image Translation" [[paper](https://aclanthology.org/2023.acl-long.751/)]
+## Download ECOIT Dataset
+We have released ECOIT Dataset, you can download it [[here](https://pan.baidu.com/s/1UYSjSD6GUrt1tTqwgZlH0g?pwd=1fdg)].
 ## installment
 pip install -e ./
 
